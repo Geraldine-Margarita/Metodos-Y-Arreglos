@@ -1,6 +1,6 @@
 .main-section {
     background-image: url('../img/img-main.jpeg');
-    background-size: cover; /* La imagen cubrirá todo el ancho y largo */
+    background-size: cover; 
     background-position: center;
     height: 300px;
     display: flex;
@@ -17,11 +17,7 @@
 .card img{
     height: 250px;
 }
-/* assets/css/estilos.css */
 
-/* ------------------------
-   RESET / BASE
-   ------------------------ */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -37,9 +33,7 @@ html, body {
   -moz-osx-font-smoothing:grayscale;
 }
 
-/* ------------------------
-   NAVBAR
-   ------------------------ */
+
 .navbar {
   background: #ffffff;
   box-shadow: 0 2px 6px rgba(20,20,20,0.04);
@@ -58,9 +52,7 @@ html, body {
   color: #111827;
 }
 
-/* ------------------------
-   HERO / MAIN SECTION
-   ------------------------ */
+
 .main-section {
   background-image: linear-gradient(0deg, rgba(15,23,42,0.55), rgba(15,23,42,0.35)), url('../img/img-main.jpeg');
   background-size: cover;
@@ -81,18 +73,14 @@ html, body {
   text-shadow: 0 6px 18px rgba(2,6,23,0.45);
 }
 
-/* ------------------------
-   SECTIONS / TITLES
-   ------------------------ */
+
 .container h2 {
   font-size: 1.4rem;
   margin-bottom: 1rem;
   color: #0f172a;
 }
 
-/* ------------------------
-   CARD STYLES
-   ------------------------ */
+
 .card {
   border: 1px solid rgba(15,23,42,0.06);
   border-radius: 10px;
@@ -100,7 +88,6 @@ html, body {
   background: #fff;
 }
 
-/* card image (top) */
 .card-img-top {
   display: block;
   width: 100%;
@@ -109,7 +96,7 @@ html, body {
   object-position: center;
 }
 
-/* card body layout */
+
 .card-body {
   padding: 1rem;
   display: flex;
@@ -128,22 +115,22 @@ html, body {
   color: #374151;
 }
 
-/* price style */
+
 .card-body p strong {
   color: #0b5fff;
   font-weight: 700;
 }
 
-/* ensure card full height so button sits at bottom */
+
 .card.h-100 { display:flex; flex-direction:column; }
 
-/* button in card */
+
 .card .btn {
   border-radius: 8px;
   padding: .5rem .6rem;
 }
 
-/* small meta (icons row) */
+
 .icon-row {
   display: flex;
   gap: .6rem;
@@ -152,7 +139,7 @@ html, body {
   margin-top: .25rem;
 }
 
-/* icon spans used for delegation */
+
 span[data-type] {
   display: inline-flex;
   gap: .4rem;
@@ -168,25 +155,19 @@ span[data-type]:hover {
   background-color: rgba(15,23,42,0.03);
 }
 
-/* coloring for fa icons (class applied inline) */
-.text-success { color: #059669 !important; }   /* green */
-.text-danger  { color: #dc2626 !important; }   /* red */
 
-/* ------------------------
-   GRID / RESPONSIVE TWEAKS
-   ------------------------ */
+.text-success { color: #059669 !important; } 
+.text-danger  { color: #dc2626 !important; } 
+
+
 .row { margin-left: 0; margin-right: 0; }
 
-/* cards spacing on small screens */
 @media (max-width: 767px) {
   .card-img-top { height: 160px; }
   .main-section { height: 220px; padding: 1.6rem; }
   .main-section h1 { font-size: 1.6rem; }
 }
 
-/* ------------------------
-   TABLE / LIST (opcional)
-   ------------------------ */
 .table-custom {
   width: 100%;
   border-collapse: collapse;
@@ -198,9 +179,7 @@ span[data-type]:hover {
   border-bottom: 1px solid rgba(15,23,42,0.05);
 }
 
-/* ------------------------
-   FOOTER / SMALL HELPERS
-   ------------------------ */
+
 a.btn-dark {
   background: #0b1220;
   border: 0;
@@ -212,12 +191,13 @@ a.btn-dark:hover {
   transform: translateY(-1px);
 }
 
-/* utility */
+
 .text-center { text-align:center; }
 .mt-3 { margin-top: 1rem; }
 
-/* small accessibility: focus */
+
 a:focus, button:focus, span[data-type]:focus {
   outline: 3px solid rgba(11,95,255,0.12);
   outline-offset: 2px;
 }
+
