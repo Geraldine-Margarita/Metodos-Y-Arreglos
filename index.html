@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Desafío - Inmobiliaria</title>
+    <link rel="stylesheet" href="css\estilos.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Inmobiliaria ADL</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMain">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="propiedades_venta.html">En venta</a></li>
+            <li class="nav-item"><a class="nav-link" href="propiedades_alquiler.html">Alquiler</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container-fluid main-section text-white text-center py-5">
+      <h1>Encuentra tu nueva propiedad</h1>
+    </main>
+
+    <div class="container mt-5">
+      <!-- Propiedades en venta -->
+      <section id="venta">
+        <h2>Propiedades en venta</h2>
+        <!-- Contenedor vacío que rellenará main.js -->
+        <div id="contenedor-venta" class="row"></div>
+
+        <a href="propiedades_venta.html" class="btn btn-dark mt-3">Ver todas las propiedades en venta</a>
+      </section>
+
+      <hr />
+
+      <!-- Propiedades en alquiler -->
+      <section id="alquiler" class="mb-5">
+        <h2>Propiedades en alquiler</h2>
+        <!-- Contenedor vacío que rellenará main.js -->
+        <div id="contenedor-alquiler" class="row"></div>
+
+        <a href="propiedades_alquiler.html" class="btn btn-dark mt-3">Ver todas las propiedades en alquiler</a>
+      </section>
+    </div>
+
+    <!-- Iconos -->
+    <script src="https://kit.fontawesome.com/f5bdbb41e0.js" crossorigin="anonymous"></script>
+
+    <!-- Tus datos y lógica (asegúrate de tener data.js y main.js tal como te facilité) -->
+    <script src="jss\data.js" defer></script>
+    <script src="jss\main.js" defer ></script>
+
+    <!-- Llamada para renderizar (se ejecuta cuando el DOM esté listo) -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // Renderizamos máximo 3 en el home (usa slice si quieres limitar)
+        if (typeof renderizarPropiedadesEn === 'function' && typeof propiedadesVenta !== 'undefined' && typeof propiedadesAlquiler !== 'undefined') {
+          renderizarPropiedadesEn('contenedor-venta', propiedadesVenta.slice(0, 3));
+          renderizarPropiedadesEn('contenedor-alquiler', propiedadesAlquiler.slice(0, 3));
+        } else {
+          console.error('Faltan funciones o variables: verifica que assets/js/data.js y assets/js/main.js estén cargados y sin errores.');
+        }
+      });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
